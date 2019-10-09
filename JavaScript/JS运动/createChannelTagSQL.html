@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>批量生成SQL|Demos 代码演示、代码片段 - 读你 | 这世间唯有梦想和好姑娘不可辜负!</title>
+    <meta name="Keyword" content="代码演示,代码片段,HTML5,CSS3,JavaScript,jQuery,Bootstrap,Angular,NodeJS,Node.js,ECMA2016,ES6,Promise,FetchAPI,Vue.js,React,React Native,webpack,gulp,ionic">
+    <meta name="Author" content="dunizb">
+    <meta name="website" content="http://www.dunizb.com">
+    <meta name="Description" content="Demos 代码演示、代码片段 - 读你 | 这世间唯有梦想和好姑娘不可辜负!">
+    <link type="image/x-icon" rel="shortcut icon" href="favicon.ico"/>
+</head>
+<body>
+<script type="text/javascript">
+//INSERT INTO `channel` VALUES ('家长慧', 'A', 'W9L60WPLFD', '6', 'onlyhi.cn', '1', 'WX', '', '0', '2016-11-05 15:54:18', '2016-11-05 15:54:18');
+
+//表名
+var table = "channel";
+//列标题
+var columnTitle = ['name','level','adid','type','platform','update_date'];
+//插入的值
+      
+var adidArray = adid.split(/\n/);
+var channelNameArray = channelName.split(/\n/);
+var levalArray = level.split(/\n/);
+var formUrlArray = formUrl.split(/\n/);
+
+//['name','level','adid','type','platform','update_date'];
+function insetSQl(){
+    for(var j=0; j<channelNameArray.length; j++){
+      var sql = `-- ${j}<br/>insert into ${table} (${columnTitle}) values ('${channelNameArray[j]}','${levalArray[j]}','${randomStrCode(10)}','6','微信','2016-11-01 16:42:18');<br/>`;
+      document.writeln(sql);
+    }
+}
+
+//insetSQl();
+
+//channel_adid,channel_name,form_id,update_date
+columnTitle = ['channel_adid','channel_name','form_id','update_date'];
+function insetFormsChannelSQl(){
+    for(var j=0; j<channelNameArray.length; j++){
+      var adid = channelObj[channelNameArray[j]];
+      var formId = getFormId(formUrlArray[j]);
+      var sql = `-- ${j}<br/>insert into forms_channel (${columnTitle}) values ('${adid}','${channelNameArray[j]}','${formId}','2016-11-01 16:42:18');<br/>`;
+      document.writeln(sql);
+    }
+}
+
+insetFormsChannelSQl();
+
+function objSql(){  
+  channelObj = "{";
+  for(var i=0; i<adidArray.length; i++){
+    channelObj += `"${channelNameArray[i]}":"${adidArray[i]}",`;
+  }
+  channelObj += "}";
+
+  return channelObj;
+}
+
+// document.writeln(objSql());
+
+
+//UPDATE forms_channel SET channel_adid = '' WHERE channel_adid= '' OR channel_adid=NULL;
+function updateSQl(){
+    for(var j=0; j<channelNameArray.length; j++){
+      var adid = channelObj[channelNameArray[j]];
+      var sql = `-- ${j}<br/>UPDATE forms_channel SET channel_adid = '${adid}' WHERE channel_name='${channelNameArray[j]}';<br/>`;
+      document.writeln(sql);
+    }
+}
+
+updateSQl();
+
+function updateLevelSql(){
+  console.log(channelNameArray.length);
+  console.log(levalArray.length);
+    for(var i=0; i<channelNameArray.length; i++){
+      var sql = `-- ${i}<br/>UPDATE channel SET level = '${levalArray[i]}' WHERE name='${channelNameArray[i]}';<br/>`;
+      document.writeln(sql);
+    }
+}
+
+//updateLevelSql();
+
+function convertDateTime(str){
+  var arr = str.split("/");
+  return `${arr[0]}-${arr[1]}-${arr[2]} 00:00:00`;
+}
+
+function getFormId(url){
+    return url.split("/f/")[1];
+}
+
+function randomStrCode(len) {
+    if(!len) len = 4;
+    var d,
+        e,
+        b = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789",
+        c = "";
+    for (d = 0; len > d; d += 1){
+        e = Math.random() * b.length, e = Math.floor(e), c += b.charAt(e);
+    }
+    return c.toLocaleUpperCase();
+}
+</script>
+</body>
+</html>

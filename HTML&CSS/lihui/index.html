@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no" />
+    <title>哈哈，哎哟</title>
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+<body>
+    <!--整体布局盒子-->
+    <div class="layout">
+        <div class="header-img-box">
+            <div class="img">
+                <img src="./img/1.png" alt="1.jpg">
+            </div>
+            <div class="watch">已关注/1000</div>
+            <div class="img-box-price">
+                <div>888元/秒</div>
+                <div>箭头</div>
+            </div>
+        </div>
+        <div class="price-list">
+            <ul>
+                <li>
+                    <div class="item">
+                        <p>最高</p>
+                        <p>0.35</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="item">
+                        <p>最低</p>
+                        <p>0.19</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="item">
+                        <p>均价</p>
+                        <p>0.30</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="item b0">
+                        <p>成交额</p>
+                        <p>19131.55</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="item">
+                        <p>最新</p>
+                        <p>972.00元/小时</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="item">
+                        <p>委买</p>
+                        <p>169401</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="item">
+                        <p>委卖</p>
+                        <p>24000</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="item b0">
+                        <p>总市值</p>
+                        <p>233280.00</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="hr"></div>
+        <div class="charts">
+            <ul class="tab">
+                <li class="tab-item active">
+                    分时
+                    <div class="split"></div>
+                </li>
+                <li class="tab-item">日K</li>
+            </ul>
+            <div class="products">
+                <div class="main selected">
+                    <div class="kline-content" id="kline-time"></div>
+                </div>
+                <div class="main">
+                    日K日K日K日K日K日K日K日K日K
+                    <div class="kline-content" id="kline-day"></div>
+                </div>
+            </div>
+        </div>
+        <div class="hr"></div>
+        <div class="content">
+            <div class="wrapper-ul">
+                <ul>
+                    <li>
+                        <span class="title">转1</span>
+                        <span class="rate">0.27</span>
+                        <span class="price">12000</span>
+                    </li>
+                    <li>
+                        <span class="title">转2</span>
+                        <span class="rate red">0.35</span>
+                        <span class="price">12000</span>
+                    </li>
+                    <li>
+                        <span class="title">转3</span>
+                        <span class="rate">--</span>
+                        <span class="price">--</span>
+                    </li>
+                    <li>
+                        <span class="title">转4</span>
+                        <span class="rate">--</span>
+                        <span class="price">--</span>
+                    </li>
+                    <li>
+                        <span class="title">转5</span>
+                        <span class="rate">--</span>
+                        <span class="price">--</span>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <span class="title">买1</span>
+                        <span class="rate green">0.27</span>
+                        <span class="price">12000</span>
+                    </li>
+                    <li>
+                        <span class="title">买2</span>
+                        <span class="rate green">0.35</span>
+                        <span class="price">12000</span>
+                    </li>
+                    <li>
+                        <span class="title">买3</span>
+                        <span class="rate green">--</span>
+                        <span class="price">--</span>
+                    </li>
+                    <li>
+                        <span class="title">买4</span>
+                        <span class="rate green">--</span>
+                        <span class="price">--</span>
+                    </li>
+                    <li>
+                        <span class="title">买5</span>
+                        <span class="rate green">--</span>
+                        <span class="price">--</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="hr"></div>
+        <div class="content opear-tim">
+            <div class="wrapper-title">
+                <div class="title">时间使用范围</div>
+            </div>
+            <table class="opear-time-table">
+                <thead>
+                    <tr>
+                        <th colspan="2" class="left">服务类型</th>
+                        <th>所需时间(秒)</th>
+                        <th style="width: 70px;">想约人数</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="left">1</td>
+                        <td class="left">下午茶</td>
+                        <td>7200</td>
+                        <td>24</td>
+                        <td>👍</td>
+                    </tr>
+                    <tr>
+                        <td class="left">2</td>
+                        <td class="left">打游戏</td>
+                        <td>14400</td>
+                        <td>17</td>
+                        <td>👍</td>
+                    </tr>
+                    <tr>
+                        <td class="left">3</td>
+                        <td class="left">午餐</td>
+                        <td>7200</td>
+                        <td>15</td>
+                        <td>👍</td>
+                    </tr>
+                    <tr>
+                        <td colspan="5" class="more">查看更多</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="hr"></div>
+        <div class="myinfo">
+            <ul class="tab">
+                <li class="tab-item active">
+                    个人资料
+                    <div class="split"></div>
+                </li>
+                <li class="tab-item">
+                    动态
+                    <div class="split"></div>
+                </li>
+                <li class="tab-item">
+                    周边
+                    <div class="split"></div>
+                </li>
+                <li class="tab-item">
+                    行程
+                </li>
+            </ul>
+            <div class="products">
+                <div class="main selected">
+                    <div class="tags">
+                        <span>跨界达人</span>
+                        <span>星座达人</span>
+                    </div>
+                    <div class="hr"></div>
+                    <div class="wrapper">
+                        <div class="title">
+                            <span>个人简介</span>
+                        </div>                    
+                    </div>
+                    <table class="myinfo-content myinfo-table">
+                        <tbody>
+                            <tr>
+                                <th>国籍</th>
+                                <td>中国</td>
+                            </tr>
+                            <tr>
+                                <th>名族</th>
+                                <td>汉族</td>
+                            </tr>
+                            <tr>
+                                <th>职业</th>
+                                <td>网络主播、演员、平面模特、主持人</td>
+                            </tr>
+                            <tr>
+                                <th>星座</th>
+                                <td>天蝎座人</td>
+                            </tr>
+                            <tr>
+                                <th>出生日期</th>
+                                <td>1989-10-25人</td>
+                            </tr>
+                            <tr>
+                                <th>毕业院校</th>
+                                <td>保密</td>
+                            </tr>
+                            <tr>
+                                <th>常住地</th>
+                                <td>上海</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="hr"></div>
+                    <div class="wrapper">
+                        <div class="title">
+                            <span>主要经历</span>
+                        </div>  
+                    </div>    
+                    <ul class="myinfo-content myinfo-actives">
+                        <li>2016年，参加男士品牌解释活动</li>
+                        <li>2016年，参加杰士派线下驻场活动</li>
+                        <li>2016年，作为《小哥喂喂喂》特邀嘉宾参与节目</li>
+                        <li>2016年，参加百盛线下驻场活动</li>
+                        <li>2016年，第五届海口网红节特邀嘉宾</li>
+                        <li>2016年，荣获花椒直播平台全国十大主播</li>
+                    </ul>  
+                    <div class="hr"></div> 
+                    <div class="wrapper">
+                        <div class="title">
+                            <span>温馨提示</span>
+                        </div>  
+                    </div>     
+                    <div class="myinfo-content myinfo-tips">
+                        <p>1、这世间唯有梦想和好姑娘不可辜负！博客：http://dunizb.com，公众号：做工程师不做码农</p>
+                        <p>2、作为开发同学，一些基本的测试岗位相关知识还是很有必要了解一下，免的某些同学在工作中和测试同学斗嘴、打架、群殴等以及被测试鄙视....</p>
+                    </div> 
+                    <div class="hr"></div> 
+                    <div class="wrapper">
+                        <div class="title">
+                            <span>温馨提示</span>
+                        </div>  
+                    </div> 
+                    <div class="myinfo-content myinfo-products">
+                        作品1
+                    </div>
+                    <div class="hr"></div> 
+                    <div class="wrapper">
+                        <div class="title">
+                            <span>相册</span>
+                        </div>  
+                    </div> 
+                    <div class="myinfo-content myinfo-products">
+                        作品1
+                    </div>
+                </div>
+                <div class="main">
+                    2
+                </div>
+                <div class="main">
+                    3
+                </div>
+                <div class="main">
+                    4
+                </div>
+            </div>
+        </div>    
+    </div>
+</body>
+
+<script src="https://cdn.bootcss.com/jquery/2.2.3/jquery.min.js"></script>
+<script src="http://echarts.baidu.com/build/dist/echarts.js"></script>
+<script type="text/javascript">
+    $(function () {
+        var $chartsTab = $(".charts>.tab>li");
+        var $myinfoTab = $(".myinfo>.tab>li");
+        $chartsTab.mouseenter(function(){
+            $(this).addClass("active").siblings().removeClass("active");
+            var index = $(this).index();
+            $(".charts>.products>div").eq(index).addClass("selected").siblings().removeClass("selected");
+        });
+        $myinfoTab.mouseenter(function(){
+            $(this).addClass("active").siblings().removeClass("active");
+            var index = $(this).index();
+            $(".myinfo>.products>div").eq(index).addClass("selected").siblings().removeClass("selected");
+        });
+    });
+
+    loadEchart1();
+    function loadEchart1() {
+        require.config({
+            paths: {
+                echarts: 'http://echarts.baidu.com/build/dist'
+            }
+        });
+        
+        require([
+            'echarts',
+            'echarts/chart/bar' // 使用柱状图加载bar模块
+        ],
+        function (ec) {
+            var mychart = ec.init(document.getElementById('kline-time'));
+
+            var option = {
+                tooltip: {
+                    show: true
+                },
+                legend: {
+                    data: ['销量']
+                },
+                xAxis: [{
+                    type: 'category',
+                    data: ['衬衫', '羊毛衫', '雪纺衫', '裤子', '高跟鞋', '袜子']
+                }],
+                yAxis: [{
+                    type: 'value'
+                }],
+                series: [{
+                    'name': "销量",
+                    "type": "bar",
+                    "data": [15, 20, 3, 40, 20, 25]
+                }]
+            };
+
+            mychart.setOption(option);
+        });
+    }
+</script>
+</html>

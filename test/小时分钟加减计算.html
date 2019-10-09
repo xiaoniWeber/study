@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>小时分钟加减计算</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+    function computedEndTime(len, value) {
+        //07:00,07:30,10:00,10:30
+        let h = value.split(':')[0]; //小时，07
+        let m = value.split(':')[1]; //分钟，00
+        let time = Number.parseInt(len.split('.')[0]); //时间间隔
+        let ih = Number.parseInt(h),
+            im = Number.parseInt(m),
+            nh = '',
+            nm = '';
+        if (len.includes('.')) { //小数，1.5
+            if (m === '00') { //整点
+                nm = '30';
+            } else { //半点
+                nm = '00';
+                ih += 1;
+            }
+            if (ih + time > 9) {
+                nh = ih + time;
+            } else {
+                nh = '0' + (ih + time);
+            }
+        } else {
+            nm = (m === '00') ? '00' : '30';
+            if (ih + time > 9) {
+                nh = ih + time;
+            } else {
+                nh = '0' + (ih + time);
+            }
+        }
+        return nh + ':' + nm;
+    }
+    console.log(computedEndTime('3.5', '07:30'));
+    </script>
+</body>
+
+</html>
